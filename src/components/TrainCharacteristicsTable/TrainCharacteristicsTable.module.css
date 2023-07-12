@@ -1,0 +1,47 @@
+.container{
+   background-color: #fff;
+    height: 100%;
+    padding: 10px;
+}
+.table{
+   text-align: center;
+   border-collapse: separate;
+   padding: 30px;
+   border-spacing: 0;
+}
+
+.table th{
+   background-color: #718093;
+   padding: 10px;
+}
+
+.table td{
+   cursor: pointer;
+}
+
+.table td:hover{
+   background-color: #dcdde1;
+}
+
+.table th, td {
+   border-style: solid;
+   border-width: 0 1px 1px 0 ; 
+   padding: 10px;
+}
+
+.btn{
+   margin-top: 20px;
+   padding: 20px;
+   background-color: inherit;
+   background-color: #fff;
+   cursor: pointer;
+}
+
+.btn:hover{
+   background-color: #95a5a6;
+   box-shadow: 1px 1px 4px black;
+}
+
+.btn:active{
+   transform: scale(90%);
+}

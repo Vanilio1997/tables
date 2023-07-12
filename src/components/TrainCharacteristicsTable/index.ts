@@ -1,0 +1,1 @@
+export { TrainCharacteristicsTable } from './TrainCharacteristicsTable';

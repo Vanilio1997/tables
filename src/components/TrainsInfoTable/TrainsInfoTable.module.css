@@ -1,0 +1,33 @@
+.container{
+   background-color: #fff;
+   height: 100%;
+   padding: 10px;
+}
+
+.table{
+   text-align: center;
+   border-collapse: separate;
+   background-color: #fff;
+   padding: 30px;
+   border-spacing: 0;
+}
+
+.table th{
+   background-color: #718093;
+   padding: 10px;
+}
+
+.table td{
+   cursor: pointer;
+}
+
+.table td:hover{
+   background-color: #dcdde1;
+}
+
+.table th, td {
+   border-style: solid;
+   border-width: 0 1px 1px 0 ; 
+   padding: 10px
+   ;
+}

@@ -1,0 +1,16 @@
+.red{
+   background-color: red;
+}
+
+.input{
+   background-color: inherit;
+   outline: none;
+   border: none;
+} 
+
+
+
+.input:active, :hover, :focus {
+   outline: 0;
+   outline-offset: 0;
+}
