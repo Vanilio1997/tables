@@ -1,1 +1,3 @@
-export { TrainCharacteristicsTable } from './TrainCharacteristicsTable';
+import  TrainCharacteristicsTable  from './TrainCharacteristicsTable';
+
+export default TrainCharacteristicsTable;

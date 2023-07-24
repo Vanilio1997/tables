@@ -13,7 +13,6 @@ const TrainsInfoTable = ({trainsInfo}:ITrainInfoTableProps) => {
 
     function pickTrain(characteristics:ITrainCharacteristics[] , train: string):void{
 
-
         const trainCharacheteristicsWithValidate:TrainCharacteristics[] = characteristics.map(values => {
             return {
                 engineAmperage: {value:values.engineAmperage} ,
@@ -25,26 +24,32 @@ const TrainsInfoTable = ({trainsInfo}:ITrainInfoTableProps) => {
             payload: { charachteristics:trainCharacheteristicsWithValidate ,train}});
     }
 
+    console.log('TrainsInfoTable');
+
     return (
         <div className={s.container}>
             <table className={s.table}>
                 <caption>Поезда</caption>
-                <tr>
-                    <th>Название</th>
-                    <th>Описание</th>
-                </tr>
-                {
-                    trainsInfo.length
-                        ?
-                        trainsInfo.map(train => (
-                            <tr onClick={() => pickTrain(train.characteristics , train.name)}>
-                                <td>{train.name}</td>
-                                <td>{train.description}</td>
-                            </tr>
-                        ))
-                        :
-                        <Loader />
-                }
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Описание</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        trainsInfo.length
+                            ?
+                            trainsInfo.map((train , index) => (
+                                <tr key={index} onClick={() => pickTrain(train.characteristics , train.name)}>
+                                    <td>{train.name}</td>
+                                    <td>{train.description}</td>
+                                </tr>
+                            ))
+                            :
+                            <Loader />
+                    }
+                </tbody>
             </table>
 
         </div>

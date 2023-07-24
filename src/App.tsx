@@ -7,7 +7,7 @@ import { getData } from './api/getData';
 import { trainsDdataUrl } from './constants/url';
 
 import  TrainsInfoTable  from './components/TrainsInfoTable';
-import { TrainCharacteristicsTable} from './components/TrainCharacteristicsTable';
+import  TrainCharacteristicsTable from './components/TrainCharacteristicsTable';
 import {ErrorMessage} from './components/ErrorMessage';
 
 export const App = () => {
@@ -17,6 +17,7 @@ export const App = () => {
     const isAllValidate = UseTypedSelector(store => store.trainData.isAllValidate);
     const currentTrain = UseTypedSelector(store => store.trainData.currentTrain);
     const dispatch = useDispatch();
+    // console.log(currentCharacteristics);
 
     useEffect(()=> {
         const fetchResult =  async () => await getData<TrainsDataType>(trainsDdataUrl)
@@ -30,6 +31,7 @@ export const App = () => {
         fetchResult();
     },[]);
 
+console.log(currentCharacteristics);
 
     useEffect(()=>{
         if(currentCharacteristics.length){

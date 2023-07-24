@@ -21,7 +21,7 @@ export interface ITrainInfo {
 
 export type TrainsDataType = ITrainInfo[];
 
-export interface IAction {
+export interface IAction{
    type: string;
    payload?: any;
 };

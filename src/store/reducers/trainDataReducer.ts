@@ -26,6 +26,12 @@ export const trainDataReducer = (state = intitialState , action:IAction) => {
         return {...state , currentCharacteristics: newCurrentCharacteristics};
     case 'CHANGEVALIDATEVALUE':
         return {...state , isAllValidate: action.payload};
+    case 'ADDVALUE':
+    {
+        const newArr = [...state.currentCharacteristics];
+        newArr.splice(action.payload.id + 1 , 0 , action.payload.values);
+        return {...state , currentCharacteristics: newArr};
+    }
     default: return state;
     }
 };
